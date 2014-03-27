@@ -1,0 +1,18 @@
+{
+  "name": "Brackets",
+  "description": "Bracket Front End",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "0.8.4",
+    "express": "3.3.x",
+    "ejs-locals": "~1.0.2"
+  },
+  "engines": {
+    "npm": "1.2.x",
+    "node": "0.10.x"
+  }
+}

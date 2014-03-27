@@ -1,0 +1,76 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Webmatrix added files
+robots.txt
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Espresso
+*.esproj
+*.espressostorage
+
+# Rubinius
+*.rbc
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+publish
+.idea
+
+# build script local files
+build/buildinfo.properties
+build/config/buildinfo.properties
+
+/psds
+/comps
+
+# EE specific
+
+client/cache
+images/avatars/uploads
+images/captchas
+images/member_photos
+images/pm_attachments
+images/signature_attachments
+images/uploads
+bamsys/cache/db_cache
+bamsys/cache/magpie_cache
+bamsys/cache/page_cache
+bamsys/expressionengine/cache
+/_assets
+mincache
+/mcache/
+snippet.txt
+
+node_modules
