@@ -1,4 +1,7 @@
 $(function(){
 	console.log('ready');
-	// $('.single-bracket .top').
+	$('.button').click(function(e){
+		e.preventDefault();
+		console.log("hit " + $('.button').className);
+	});
 });
