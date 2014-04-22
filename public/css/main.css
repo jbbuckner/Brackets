@@ -2,11 +2,31 @@ div{
 	display:block;
 	line-height: 1em;
 }
-.double-bracket{
+
+.left .double-bracket{
 	float:left;
+}
+.left .mid{
+	float: left;
+}
+.left .champ{
+	float: left;
+}
+.right{
+	text-align: right;
+}
+.right .double-bracket{
+	float:right;
+}
+.right .mid{
+	float: right;
+}
+.right .champ{
+	float: right;
 }
 .single-bracket{
 	width:10em;
+	height: 65px;
 	color: #333;
 	/*margin: 1em 0;*/
 }
@@ -46,19 +66,32 @@ div.seperator{
 	background: #666;
 	border:none;
 }
-.single-bracket.high div.bottom {
+.left .single-bracket.high div.bottom {
 	border-right: 1px solid #666;
 }
-.single-bracket.low div.top {
+.left .single-bracket.low div.top {
 	border-right: 1px solid #666;
 }
-.mid{
-	float: left;
-	/*margin: 2.5% 0;*/
+.right .single-bracket.high div.bottom {
+	border-left: 1px solid #666;
+}
+.right .single-bracket.low div.top {
+	border-left: 1px solid #666;
 }
 .mid .top{
 	padding:25% 0 .2em .5em;
 }
 .mid .bottom{
 	padding: .2em 0 25% .5em;
+}
+.champ{
+	margin: 9% 0 0 1em;
+	padding: 1em;
+	line-height: 1em;
+	height: 1em;
+	width: 6em;
+
+	border: 1px solid #666;
+	text-align: center;
+
 }
