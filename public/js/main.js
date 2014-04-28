@@ -3,13 +3,20 @@ $(function(){
 	//var placeIndex = ['1-1', '1-2', '1-3', '1-4', '2-1', '2-2'];
 	$('.button').click(function(){
 		var placeholder = $(this).data('placeindex');
-		var row = placeholder.split('-')[0];
-		var place = placeholder.split('-')[1];
+		var row = placeholder.split('-')[0];//find value before -
+		var place = placeholder.split('-')[1];//find value after -
 		var value = $(this).text();
+		//if the value is in the rows beyond the one you are selecting clear it
+		checkVal(placeholder, value);
 		// console.log(row);
 		// console.log(place);
-		// console.log(value);
+		
 		row++;
 		$("."+(row)+'-'+(Math.round(place/2))).html(value);
 	});
+	function checkVal(placeholder, value){
+		// for (var i = 0; i<totalRows; i++){
+
+		// }
+	}
 });
