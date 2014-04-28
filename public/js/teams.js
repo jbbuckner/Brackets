@@ -3,7 +3,7 @@
 var bracketarray = [];
 var teams = [];
 var seeds =8;
-var totalRows;
+var totalRows = Math.log(seeds)/Math.log(2);
 var team = function(){
  	this.teamname=null;
 // 	logo:null,
@@ -46,8 +46,8 @@ function createTeams(seeds){
 	matchups(seeds);
 }
 function matchups(seeds){
-	var branch4 = Number(seeds).toString(4);
-	//if branch is 10 100 1000 ... than it is good to go. branch4%10 = 0
+	//var branch4 = Number(seeds).toString(4);
+	//need to if branch is 10 100 1000 ... than it is good to go. branch4%10 = 0
 		for (var i=0; i<seeds/2; i++){
 			bracketarray[i]= new match();
 			bracketarray[i].team1 = teams[i];
@@ -56,7 +56,8 @@ function matchups(seeds){
 		console.log('brackets ',bracketarray);
 	}
 getTotalRows=function(seeds){
-	return ((Math.log(seeds)/Math.log(2))+1);
+	return ((Math.log(seeds)/Math.log(2)));
 }
 
 createTeams(seeds);
+totalRows = getTotalRows(seeds);
