@@ -1,17 +1,8 @@
 //Teams
-// var teamlist = new Array();
-var bracketarray = [];
-var teams = [];
-var seeds =8;
-var totalRows = Math.log(seeds)/Math.log(2);
 var team = function(){
  	this.teamname=null;
-// 	logo:null,
-// 	bio:null,
-// 	seed:0,
-// 	wins:0,
-// 	losses:0,
-// 	record: this.wins+"-"+this.losses,
+// 	logo:null,bio:null,seed:0,wins:0,losses:0,
+//	record: this.wins+"-"+this.losses,
 // 	percentage: function(wins, losses){
 // 		if(wins+losses>0){
 // 			this = wins/(wins+losses);
@@ -22,17 +13,7 @@ var team = function(){
 }
 
 var match = function(){
-// 	competiton:true,
-// 	team1:null,
-// 	team2:null,
-// 	seed1:null,
-// 	seed2:null,
-// 	score1:0,
-// 	score2:0,
-// 	win1:0,
-// 	win2:0,
-// 	games:0,
-// 	winner:null
+// 	competiton:true, team1:null, team2:null, seed1:null, seed2:null, score1:0, score2:0, win1:0, win2:0, games:0, winner:null
 }
 
 function createTeams(seeds){
@@ -58,6 +39,3 @@ function matchups(seeds){
 getTotalRows=function(seeds){
 	return ((Math.log(seeds)/Math.log(2)));
 }
-
-createTeams(seeds);
-totalRows = getTotalRows(seeds);
