@@ -1,9 +1,10 @@
-$(function(){
-	console.log('ready');
-	var bracketarray = [];
 var teams = [];
+var bracketarray = [];
 var seeds =8;
 var totalRows;
+$(function(){
+	console.log('ready');
+
 	//var placeIndex = ['1-1', '1-2', '1-3', '1-4', '2-1', '2-2'];
 $('.button').click(function(){
 	var placeholder = $(this).data('placeindex');
@@ -24,5 +25,5 @@ function checkVal(placeholder, value){
 	// }
 }
 createTeams(seeds);
-totalRows = getTotalRows(seeds);
+construct();
 });

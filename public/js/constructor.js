@@ -1,10 +1,10 @@
 //constructor
 function construct(totalRows){
-	//for (i=0; i<totalRows; i++){
-		//var rows = 'row'+i;
-		$('#full-bracket .left').append('</div>',{className:'row1'})
-		.append('</li>',{html:mathup[i]})
-		.append('</div>',{className:'row3'});
-		$('.row1').append('</div>',className:'double-bracket')
-	//}
+$('#full-bracket .left').append('<ul class ="seed-list"></ul>');
+	for (i=0; i<bracketarray.length; i++){
+		console.log("team1 ",bracketarray[i].team1);
+		$('#full-bracket .left .seed-list').append('<li class="button"></li>').append(bracketarray[i].team1.seed);
+		
+		$('#full-bracket .left .seed-list').append('<li class="button"></li>').append(bracketarray[i].team2.seed);
+	}
 }
