@@ -23,18 +23,7 @@ function createTeams(seed){
 		teams.push(newteam);
 	}
 	console.log('teams ',teams);
-	//matchups(seeds);
 }
-// function matchups(seeds){
-// 	//var branch4 = Number(seeds).toString(4);
-// 	//need to if branch is 10 100 1000 ... than it is good to go. branch4%10 = 0
-// 		for (var i=0; i<seeds/2; i++){
-// 			bracketarray[i]= new match();
-// 			bracketarray[i].team1 = teams[i];
-// 			bracketarray[i].team2 = teams[(seeds-i)-1];
-// 		}
-// 		console.log('brackets ',bracketarray);
-// 	}
 getTotalColumns=function(seeds){
 	return ((Math.log(seeds)/Math.log(2))+1);
 }
