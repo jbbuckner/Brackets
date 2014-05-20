@@ -17,17 +17,13 @@ var match = function(){
 }
 
 function createTeams(seed){
+	for (var i=0; i<seeds; i++){
 		var newteam = new team();
-		newteam.seed = seed;
+		newteam.seed = i+1;
 		teams.push(newteam);
-	// for (var i=0; i<seeds; i++){
-	// 	var newteam = new team();
-	// 	newteam.seed = i+1;
-	// 	teams.push(newteam);
-		
-	// }
+	}
 	console.log('teams ',teams);
-	matchups(seeds);
+	//matchups(seeds);
 }
 // function matchups(seeds){
 // 	//var branch4 = Number(seeds).toString(4);
@@ -39,6 +35,6 @@ function createTeams(seed){
 // 		}
 // 		console.log('brackets ',bracketarray);
 // 	}
-getTotalRows=function(seeds){
-	return ((Math.log(seeds)/Math.log(2)));
+getTotalColumns=function(seeds){
+	return ((Math.log(seeds)/Math.log(2))+1);
 }

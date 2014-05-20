@@ -1,7 +1,7 @@
 var teams = [];
 var bracketarray = [];
-var seeds =32;
-var totalRows;
+var seeds =64;
+var totalColumns;
 var roundArray = [];
 $(function(){
 	console.log('ready');
@@ -19,13 +19,14 @@ $(function(){
 	
 	//row++;
 	//$("."+(row)+'-'+(Math.round(place/2))).html(value);
+	createTeams(seeds);
+	createBracketMatchups(seeds);
 });
 function checkVal(placeholder, value){
 	// for (var i = 0; i<totalRows; i++){
 
 	// }
 }
-createBracketMatchups(seeds);
-//createTeams(seeds);
+
+
 //construct();
-});
