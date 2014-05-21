@@ -1,10 +1,18 @@
 <% layout('boilerplate') -%>
 
 <h1>Brackets</h1>
-<form>
-  Seeds: <input type="text" name="seeds">
-  <input type="submit" value="Submit">
-</form>
+<div id="menu">
+	<p>Select the number of teams</p>
+	<select id="seedValue">
+	  <option value="2">2</option>
+	  <option value="4">4</option>
+	  <option value="8">8</option>
+	  <option value="16" selected='selected'>16</option>
+	  <option value="32">32</option>
+	  <option value="64">64</option>
+	</select>
+	<button type="button" id="getValue">Submit</button>
+</div>
 <div id="full-bracket">
 	<div class="left">
 

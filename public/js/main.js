@@ -19,8 +19,17 @@ $(function(){
 	
 	//row++;
 	//$("."+(row)+'-'+(Math.round(place/2))).html(value);
-	createTeams(seeds);
-	createBracketMatchups(seeds);
+	
+	$('#getValue').click(function(){
+
+		seeds=document.getElementById("seedValue").options[seedValue.selectedIndex].value;
+		console.log("seedValue", seeds)
+		createTeams(seeds);
+		createBracketMatchups(seeds);
+		$('#menu').hide();
+		//$('#full-bracket').html(roundArray[4].matchesArray[0].team1.seed);
+		console.log("hit", roundArray);
+	});
 });
 function checkVal(placeholder, value){
 	// for (var i = 0; i<totalRows; i++){
