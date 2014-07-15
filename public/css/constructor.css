@@ -1,0 +1,49 @@
+#full-bracket{
+	margin: 0 auto;
+}
+.column{
+	width: 100px;
+	height: 100%;
+	/*border: 1px solid #333;*/
+	background-color: #eee;
+}
+.left{
+	position: relative;
+	float: left;
+	text-align: right;
+}
+.right{
+	position: relative;
+	float: right;
+	text-align: left;
+}
+.left .column{
+	position: relative;
+	float: right;
+}
+.right .column{
+	position: relative;
+	float: left;
+}
+.row{
+	display: block;
+	top:0;
+	margin: 0 1px;
+	border: 1px solid #333;
+	height: 18px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.row:hover{
+	cursor: pointer;
+
+}
+.champ{
+	line-height: 2em;
+	height: 2em;
+	text-align: center;
+}

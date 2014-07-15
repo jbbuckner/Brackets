@@ -1,6 +1,8 @@
 //Teams
 var team = function(){
  	this.teamname=null;
+ 	this.win=0;
+ 	this.loss=0;
 // 	logo:null,bio:null,seed:0,wins:0,losses:0,
 //	record: this.wins+"-"+this.losses,
 // 	percentage: function(wins, losses){
@@ -23,7 +25,4 @@ function createTeams(seed){
 		teams.push(newteam);
 	}
 	console.log('teams ',teams);
-}
-getTotalColumns=function(seeds){
-	return ((Math.log(seeds)/Math.log(2))+1);
 }

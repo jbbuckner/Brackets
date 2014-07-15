@@ -19,23 +19,27 @@ $(function(){
 	
 	//row++;
 	//$("."+(row)+'-'+(Math.round(place/2))).html(value);
-	
+
 	$('#getValue').click(function(){
 
 		seeds=document.getElementById("seedValue").options[seedValue.selectedIndex].value;
-		console.log("seedValue", seeds)
+		//console.log("seedValue", seeds)
 		createTeams(seeds);
 		createBracketMatchups(seeds);
 		$('#menu').hide();
 		//$('#full-bracket').html(roundArray[4].matchesArray[0].team1.seed);
-		console.log("hit", roundArray);
+		//console.log("hit", roundArray);
+	});
+	$("#full-bracket").on('click', '.row', function() {
+		//console.log('hit');
+		var classHolder = $(this).attr('class');
+		var classUp = $(this).parents('.column').attr('class');
+		console.log(classHolder," ", classUp);
+		var seedHolder = classHolder.substr(classHolder.indexOf('seed-')+5);
+		var rowHolder = classHolder.substr(classHolder.indexOf('row-')+4);
+		var columnHolder = classUp.substr(classUp.indexOf('-')+1)
+		console.log('seed ', seedHolder, ' column ', columnHolder);
+		grabTeam(columnHolder, seedHolder);
+		//insertTeam(columnHolder, rowHolder, seedHolder);
 	});
 });
-function checkVal(placeholder, value){
-	// for (var i = 0; i<totalRows; i++){
-
-	// }
-}
-
-
-//construct();
