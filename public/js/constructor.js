@@ -38,11 +38,11 @@ function createBracketMatchups(seeds){
 					//var matchesPerRound = seedsInColumn/2;
 						roundArray[ColumnNumber].matchesArray[currentRound].team1 = roundArray[ColumnNumber-1].matchesArray[i].team1;
 						roundArray[ColumnNumber].matchesArray[currentRound].team2 = teams[seedsInColumn-roundArray[ColumnNumber].matchesArray[currentRound].team1.seed];
-						currentRound++
+						currentRound++;
 						roundArray[ColumnNumber].matchesArray[currentRound]={};
 						roundArray[ColumnNumber].matchesArray[currentRound].team1 = roundArray[ColumnNumber-1].matchesArray[i].team2;
-						roundArray[ColumnNumber].matchesArray[currentRound].team2 = teams[seedsInColumn-roundArray[ColumnNumber].matchesArray[currentRound].team1.seed]
-						currentRound++
+						roundArray[ColumnNumber].matchesArray[currentRound].team2 = teams[seedsInColumn-roundArray[ColumnNumber].matchesArray[currentRound].team1.seed];
+						currentRound++;
 				}
 				//clearRoundArray(ColumnNumber, roundArray[ColumnNumber-1].matchesArray.length);
 				// clear previous column array
@@ -132,7 +132,7 @@ function positionBracket(totalColumns){
 			//setTop = top + margin-top/2 + height/2 + 1 ;
 			setTop = parseInt($('.'+(previousColumn)).css('top')) + parseInt($('.'+(previousColumn)+ ' .row:last-child').css('margin-top'))/2+ ($('.'+(previousColumn)+' .row').height()/2)+1;
 			
-			$('.'+(columnX)).css('top', setTop)
+			$('.'+(columnX)).css('top', setTop);
 			$('.'+(columnX)+' .row').css('margin-top', setMargin+'px');
 			$('.'+(columnX)+' .row:first-child').css('margin-top', 0);
 		}
@@ -179,7 +179,6 @@ function clearRoundArray(totalColumns){
 				//remove the matches for each column
 				roundArray[clearColumns].matchesArray[clearMatch].team1 = null;
 				roundArray[clearColumns].matchesArray[clearMatch].team2 = null;
-				
 			}//end for match
 		}//end if
 	}//end for columns

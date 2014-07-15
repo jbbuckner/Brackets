@@ -1,6 +1,6 @@
 var teams = [];
 var bracketarray = [];
-var seeds =64;
+var seeds =128;
 var totalColumns;
 var roundArray = [];
 $(function(){
