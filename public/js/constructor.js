@@ -1,24 +1,17 @@
+var classID="seed-";
 
-var Brackets = {};
-
-function Bracket(seeds){
-	this.numberofTeams = 0;
-	this.teamLocation = 0;
-	this.columns = ((Math.log(seeds)/Math.log(2))+1);
-	this.classID = 'seed-';
+getTotalColumns=function(seeds){
+	return ((Math.log(seeds)/Math.log(2))+1);
 }
-Bracket.prototype.createBracketMatchups = createBracketMatchups;
-Bracket.prototype.buildBracket = buildBracket;
-Bracket.prototype.positionBracket = positionBracket;
-// getthis.columns=function(seeds){
-// 	return ((Math.log(seeds)/Math.log(2))+1);
-// }
 
-function createBracketMatchups(){
+function createBracketMatchups(seeds){
 	//winners box
 	var ColumnNumber=0;
-	console.log('bracket columns ', Bracket.columns);
-	for (var j=0; j<Bracket.columnscolumns; j++){
+	
+	
+	totalColumns = getTotalColumns(seeds);
+	//console.log('totalColumns ', ColumnNumber);
+	for (var j=0; j<totalColumns; j++){
 		var seedsInColumn=Math.pow(2,ColumnNumber);
 		roundArray[ColumnNumber]={};
 		roundArray[ColumnNumber].matchesArray=[];
@@ -64,8 +57,8 @@ function createBracketMatchups(){
 		
 
 	}
-	clearRoundArray(Bracket.columns);
-	positionBracket(Bracket.columns);
+	clearRoundArray(totalColumns);
+	positionBracket(totalColumns);
 }
 
 function buildBracket(ColumnNumber, seedsNow){
@@ -116,16 +109,16 @@ function buildBracket(ColumnNumber, seedsNow){
 	// }
 }
 
-function positionBracket(columns){
-	$('#full-bracket').css('width', (this.columns*2-1)*$('.column').width());
+function positionBracket(totalColumns){
+	$('#full-bracket').css('width', (totalColumns*2-1)*$('.column').width());
 	var setTop;
 	var setMargin;
 	var previousColumn;
 	var columnX;
 
-	for(var i=this.columns-1; i>=0; i--){
+	for(var i=totalColumns-1; i>=0; i--){
 		columnX = 'column-'+i;
-		if(i==this.columns-1){
+		if(i==totalColumns-1){
 			$('.'+(columnX)).css('top', 0)
 			$('.'+(columnX)+' .row').css('margin-top', 0);
 		}else if(i==0){
@@ -146,13 +139,13 @@ function positionBracket(columns){
 	}
 }
 
-function clearRoundArray(columns){
+function clearRoundArray(totalColumns){
 	// clear previous column array
 	var clearRound;
 	var columnX;
 	var team1holder;
 	var team2holder;
-	for(var clearColumns=0; clearColumns<this.columns-1; clearColumns++){
+	for(var clearColumns=0; clearColumns<totalColumns-1; clearColumns++){
 		columnX='column-'+clearColumns;
 		//remove data from visible bracket
 		$('.'+(columnX)+' .row').empty();
