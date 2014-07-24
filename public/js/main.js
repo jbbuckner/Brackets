@@ -25,7 +25,7 @@ $(function(){
 		seeds=document.getElementById("seedValue").options[seedValue.selectedIndex].value;
 		//console.log("seedValue", seeds)
 		createTeams(seeds);
-		createBracketMatchups(seeds);
+		Bracket.prototype.createBracketMatchups(seeds);
 		$('#menu').hide();
 		//$('#full-bracket').html(roundArray[4].matchesArray[0].team1.seed);
 		//console.log("hit", roundArray);
