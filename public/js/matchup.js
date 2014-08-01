@@ -1,21 +1,24 @@
 var Matchup = {
-	CreateMatchup: function(seeds){
+	CreateMatchups: function(seeds){
 		var matchups = [];
 		//create a matchup
 		//put highest seeded team obj in
 		//put lowest seeded team obj in
 		//need round?
-		var matchup = Matchup.BuildMatchup({
-			team1 : Team.TeamObject(),
-			team2 : Team.TeamObject()
-		});
-		
+		//columns = ((Math.log(Bracket.numberofTeams)/Math.log(2))+1);
+		for (var i=0; i<seeds; i++){
+			var matchup = Matchup.BuildMatchup({
+				highSeed : Team.TeamObject(),
+				lowSeed : Team.TeamObject()
+			});
+			matchups.push(matchup);
+		}
 		return matchup;
-	}
+	},
 	BuildMatchup: function(matchupProperties){
 		var MatchupObject = function(matchupProperties){
-			this.team1 = matchupProperties.team1;
-			this.team2 = matchupProperties.team2;
+			this.highSeed = matchupProperties.highSeed;
+			this.lowSeed = matchupProperties.lowSeed;
 			//this.winner = null;
 			// this.team1Wins = 0;
 			// this.team2Wins = 0;
@@ -24,7 +27,8 @@ var Matchup = {
 			this.competition = true;
 		};
 		MatchupObject.prototype.sortMatches = function(){
-			
+
 		};
+		return new MatchupObject(matchupProperties);
 	}
 }

@@ -6,7 +6,7 @@ $(function(){
 		var seeds = document.getElementById("seedValue").options[seedValue.selectedIndex].value;
 		//var bracket = new Bracket(seeds);
 		var teams = Team.CreateTeams(seeds);
-		var matchup = Matchup.CreateMatchup(seeds);
+		var matchup = Matchup.CreateMatchups(seeds);
 		var bracket = Bracket.CreateBracket(seeds);
 		
 		bracket.createBracketMatchups(seeds);
