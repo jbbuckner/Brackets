@@ -22,6 +22,9 @@ var Matchup = {
 			// this.team1Score = 0;
 			// this.team2Score = 0;
 			this.competition = true;
-		}
+		};
+		MatchupObject.prototype.sortMatches = function(){
+			
+		};
 	}
 }
