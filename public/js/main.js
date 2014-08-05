@@ -3,13 +3,12 @@ $(function(){
 
 	$('#getValue').click(function(){
 
-		var seeds = document.getElementById("seedValue").options[seedValue.selectedIndex].value;
+		var seeds = document.getElementById("seedValue").options[seedValue.selectedIndex].value || 16;
 		//var bracket = new Bracket(seeds);
-		var teams = Team.CreateTeams(seeds);
-		var matchup = Matchup.CreateMatchups(seeds);
 		var bracket = Bracket.CreateBracket(seeds);
+		var teams = Team.CreateTeams(seeds);
 		
-		bracket.createBracketMatchups(seeds);
+		//bracket.createBracketMatchups(seeds);
 		$('#menu').hide();
 	});
 	$("#full-bracket").on('click', '.row', function() {

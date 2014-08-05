@@ -1,22 +1,24 @@
 var Matchup = {
-	CreateMatchups: function(seeds){
+	CreateMatchups: function(totalRounds){
 		var matchups = [];
 		//create a matchup
 		//put highest seeded team obj in
 		//put lowest seeded team obj in
 		//need round?
 		//columns = ((Math.log(Bracket.numberofTeams)/Math.log(2))+1);
-		for (var i=0; i<seeds; i++){
+		for (var i=0; i<totalRounds; i++){
 			var matchup = Matchup.BuildMatchup({
-				highSeed : Team.TeamObject(),
-				lowSeed : Team.TeamObject()
+				round : i
+				//highSeed : Team.TeamObject(),
+				//lowSeed : Team.TeamObject()
 			});
 			matchups.push(matchup);
 		}
-		return matchup;
+		return matchups;
 	},
 	BuildMatchup: function(matchupProperties){
 		var MatchupObject = function(matchupProperties){
+			this.round = matchupProperties.round;
 			this.highSeed = matchupProperties.highSeed;
 			this.lowSeed = matchupProperties.lowSeed;
 			//this.winner = null;
