@@ -17,12 +17,11 @@ var Bracket = {
 			Bracket._totalRounds = Math.log(seeds)/Math.log(2)+1;
 		}
 	},
-	CreateBracket: function(seeds){
+	CreateBracket: function(seeds, teams){
 		Bracket.setTotalRounds(seeds);
 		Bracket.setCurrentRound(0);
 		console.log(Bracket.getTotalRounds());
-		var matchup = Matchup.CreateMatchups(Bracket.getTotalRounds());
+		var matchup = Matchup.CreateMatchups(Bracket.getTotalRounds(), teams);
 		console.log(matchup);
 	}
-
 };

@@ -1,47 +1,37 @@
 var Matchup = {
-	CreateMatchups: function(totalRounds){
+	CreateMatchups: function(totalRounds, teams){
 		var matchups = [];
 		//create a matchup
 		//put highest seeded team obj in
 		//put lowest seeded team obj in
 		//need round?
 		//columns = ((Math.log(Bracket.numberofTeams)/Math.log(2))+1);
-		for (var i=0; i<totalRounds; i++){
-			var seedsInColumn = Math.pow(2,i);
-			switch (seedsInColumn){
-				case 1:
-					var matchup = Matchup.BuildMatchup({
-						round : i+1,
-						winner: null,
-						lowSeed : null,
-						competition: false
-					});
-					matchups.push(matchup);
-				break;
-				case 2:
-					var matchup = Matchup.BuildMatchup({
-						round : i+1
-						//highSeed : Team.TeamObject(),
-						//lowSeed : Team.TeamObject()
-					});
-					matchups.push(matchup);
-				break;
-				default:
-				console.log(seedsInColumn);
-					for (var j=0; j<seedsInColumn/2; j++){
-						console.log(j);
-						var matchup = Matchup.BuildMatchup({
-						round : i+1,
-						highSeed : j+1
-						//lowSeed : Team.TeamObject()
-						});
-						matchups.push(matchup);
-					};
-					
-				break;
+		// for (var i=0; i<totalRounds; i++){
+		// 	var seedsInColumn = Math.pow(2,i);
+		// 	console.log(seedsInColumn);
+		// 	for (var j=0; j<seedsInColumn/2; j++){
+		// 		console.log(j);
+		// 		var matchup = Matchup.BuildMatchup({
+		// 		round : i+1,
+		// 		//lowSeed : teams.seed,
+		// 		//highSeed : teams[teams.length-j]
+		// 		});
+		// 		matchups.push(matchup);
+		// 	};
+		// }
+		var matchup = Matchup.BuildMatchup({
+			for (seed in teams){
+				console.log("seeds", teams[seed]),
+				round : i+1,
+				lowSeed : teams[seed],
+				for (i=0; i<teams.length; i++){
+					highSeed : teams[]
+				}
 			}
-			
 		}
+		teams.forEach(function(seed){
+			console.log("seeds", seed);
+		});
 		return matchups;
 	},
 	BuildMatchup: function(matchupProperties){
