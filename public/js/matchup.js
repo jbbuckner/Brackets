@@ -2,7 +2,7 @@ var Matchup = {
 	CreateMatchups: function(totalRounds, teams){
 		var matchups = [];
 
-		columns = (Math.log(teams.length)/Math.log(2))+1;
+		var columns = (Math.log(teams.length)/Math.log(2))+1;
 
 		// for (var i=0; i<totalRounds; i++){
 		// 	var seedsInColumn = Math.pow(2,i);
@@ -34,8 +34,8 @@ var tempTeams = teams.slice(0, teams.length);
 			}else{
 				while(tempTeams.length>0){
 				console.log("tempTeams", tempTeams);
-				var highSeedHolder = tempTeams.pop();
-				var lowSeedHolder = tempTeams.shift();
+				var highSeedHolder = tempTeams.shift();
+				var lowSeedHolder = tempTeams.pop();
 				var matchup = Matchup.BuildMatchup({
 					//var matchupTeams = {};			
 					round: columns,
