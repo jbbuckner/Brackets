@@ -34,8 +34,8 @@ var tempTeams = teams.slice(0, teams.length);
 			}else{
 				while(tempTeams.length>0){
 				console.log("tempTeams", tempTeams);
-				var highSeedHolder = tempTeams.shift();
-				var lowSeedHolder = tempTeams.pop();
+				var highSeedHolder = tempTeams.pop();
+				var lowSeedHolder = tempTeams.shift();
 				var matchup = Matchup.BuildMatchup({
 					//var matchupTeams = {};			
 					round: columns,
